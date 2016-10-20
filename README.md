@@ -4,13 +4,17 @@ Stop restarting your server after editing local gems!
 
 ## Usage
 
-In your `development.rb`, add:
+In your `config/environments/development.rb`, add:
 
-    GemReloader.watch :my_gem
-    
+```ruby
+GemReloader.watch :my_gem
+```
+
 Or, if you want to watch **all** local gems:
 
-    GemReloader.watch_all!
+```ruby
+GemReloader.watch_all!
+```
     
 That's literally it. Tiny but useful.
 
@@ -22,17 +26,23 @@ By the way, a gem will be picked up by `::watch_all!` if it has a :path attribut
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's `Gemfile`:
 
-    gem 'gem_reloader'
+```ruby
+gem 'gem_reloader'
+```
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install gem_reloader
+```
+$ gem install gem_reloader
+```
 
 ## Contributing
 
@@ -44,4 +54,4 @@ Or install it yourself as:
 
 ## Changelog
 
-- v0.0.2: Added "vendor/gems" to the config.autoload_paths so the user doesn't have to.
+- v0.0.2: Added `"vendor/gems"` to the `config.autoload_paths` so the user doesn't have to.
